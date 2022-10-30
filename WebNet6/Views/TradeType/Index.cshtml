@@ -1,0 +1,19 @@
+﻿@model List<TradeType>
+
+    <h1>Tipos de contrato</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var type in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m=>type.Name)</td>
+                </tr>
+            }
+        </tbody>
+    </table>

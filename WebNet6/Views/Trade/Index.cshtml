@@ -1,0 +1,25 @@
+﻿@model List<Trade>
+
+<h1>Contratos</h1>
+<p>
+    <a asp-action="Create">Crear</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trade in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>trade.Name)</td>
+                <td>@Html.DisplayFor(m=>trade.TradeType.Name)</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
